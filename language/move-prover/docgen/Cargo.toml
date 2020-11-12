@@ -9,7 +9,6 @@ license = "Apache-2.0"
 [dependencies]
 # libra dependencies
 spec-lang = { path = "../spec-lang", version = "0.1.0" }
-bytecode = { path = "../bytecode", version = "0.1.0"}
 libra-workspace-hack = { path = "../../../common/workspace-hack", version = "0.1.0" }
 
 # external dependencies
@@ -27,7 +26,6 @@ once_cell = "1.4.1"
 move-prover = { path = "..", version = "0.1.0" }
 datatest-stable = { path = "../../../common/datatest-stable", version = "0.1.0" }
 test-utils = { path = "../test-utils", version = "0.1.0" }
-libra-temppath = { path = "../../../common/temppath", version = "0.1.0" }
 
 [[test]]
 name = "testsuite"

@@ -896,7 +896,6 @@ dependencies = [
  "bytes",
  "channel",
  "consensus-types",
- "crash-handler",
  "execution-correctness",
  "executor",
  "executor-test-helpers",
@@ -1375,7 +1374,6 @@ dependencies = [
  "bytecode-source-map",
  "bytecode-verifier",
  "colored",
- "ir-to-bytecode-syntax",
  "libra-types",
  "libra-workspace-hack",
  "move-core-types",
@@ -1396,12 +1394,10 @@ name = "docgen"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "bytecode",
  "codespan",
  "codespan-reporting",
  "datatest-stable",
  "itertools 0.9.0",
- "libra-temppath",
  "libra-workspace-hack",
  "log",
  "move-prover",
@@ -1477,12 +1473,6 @@ checksum = "801bbab217d7f79c0062f4f7205b5d4427c6d1a7bd7aafdd1475f7c59d62b283"
 dependencies = [
  "cfg-if 1.0.0",
 ]
-
-[[package]]
-name = "endian-type"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c34f04666d835ff5d62e058c3995147c06f42fe86ff053337632bca83e42702d"
 
 [[package]]
 name = "enum_dispatch"
@@ -2857,7 +2847,6 @@ dependencies = [
  "libra-canonical-serialization",
  "libra-json-rpc-client",
  "libra-types",
- "libra-validator-interface",
  "libra-workspace-hack",
  "reqwest",
  "structopt 0.3.20",
@@ -2960,7 +2949,6 @@ dependencies = [
  "libra-management",
  "libra-network-address",
  "libra-network-address-encryption",
- "libra-secure-json-rpc",
  "libra-secure-storage",
  "libra-secure-time",
  "libra-temppath",
@@ -2983,7 +2971,6 @@ name = "libra-github-client"
 version = "0.1.0"
 dependencies = [
  "base64 0.13.0",
- "libra-crypto",
  "libra-workspace-hack",
  "serde",
  "serde_json",
@@ -3053,7 +3040,6 @@ dependencies = [
  "libra-trace",
  "libra-types",
  "libra-workspace-hack",
- "libradb",
  "move-core-types",
  "move-vm-types",
  "network",
@@ -3108,7 +3094,6 @@ dependencies = [
  "prost-build",
  "serde",
  "serde_json",
- "transaction-builder",
 ]
 
 [[package]]
@@ -3161,7 +3146,6 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "erased-serde",
- "hex",
  "hostname",
  "libra-infallible",
  "libra-log-derive",
@@ -3177,8 +3161,6 @@ name = "libra-management"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "executor",
- "generate-key",
  "hex",
  "libra-canonical-serialization",
  "libra-config",
@@ -3186,22 +3168,17 @@ dependencies = [
  "libra-global-constants",
  "libra-network-address",
  "libra-network-address-encryption",
- "libra-secure-json-rpc",
  "libra-secure-storage",
  "libra-secure-time",
  "libra-temppath",
  "libra-types",
- "libra-vm",
  "libra-workspace-hack",
- "libradb",
  "serde",
  "serde_yaml",
- "storage-interface",
  "structopt 0.3.20",
  "thiserror",
  "toml",
  "transaction-builder",
- "vm-genesis",
 ]
 
 [[package]]
@@ -3353,8 +3330,6 @@ name = "libra-operational-tool"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "executor",
- "generate-key",
  "hex",
  "libra-canonical-serialization",
  "libra-config",
@@ -3368,17 +3343,13 @@ dependencies = [
  "libra-secure-time",
  "libra-temppath",
  "libra-types",
- "libra-vm",
  "libra-workspace-hack",
- "libradb",
  "serde",
  "serde_json",
- "storage-interface",
  "structopt 0.3.20",
  "thiserror",
  "toml",
  "transaction-builder",
- "vm-genesis",
 ]
 
 [[package]]
@@ -3455,18 +3426,15 @@ version = "0.1.0"
 dependencies = [
  "base64 0.13.0",
  "chrono",
- "consensus-types",
  "enum_dispatch",
  "libra-canonical-serialization",
  "libra-crypto",
  "libra-crypto-derive",
  "libra-github-client",
- "libra-global-constants",
  "libra-infallible",
  "libra-logger",
  "libra-secure-time",
  "libra-temppath",
- "libra-types",
  "libra-vault-client",
  "libra-workspace-hack",
  "rand 0.7.3",
@@ -3600,7 +3568,6 @@ dependencies = [
  "once_cell",
  "proptest",
  "proptest-derive",
- "radix_trie",
  "rand 0.7.3",
  "regex",
  "serde",
@@ -4147,7 +4114,6 @@ dependencies = [
  "handlebars",
  "hex",
  "itertools 0.9.0",
- "libra-temppath",
  "libra-types",
  "libra-workspace-hack",
  "log",
@@ -4312,7 +4278,6 @@ dependencies = [
 name = "netcore"
 version = "0.1.0"
 dependencies = [
- "async-trait",
  "bytes",
  "futures 0.3.8",
  "libra-logger",
@@ -4391,7 +4356,6 @@ dependencies = [
  "network-simple-onchain-discovery",
  "rand 0.7.3",
  "serde",
- "storage-interface",
  "subscription-service",
  "tokio",
  "tokio-retry",
@@ -4418,15 +4382,6 @@ dependencies = [
  "once_cell",
  "subscription-service",
  "tokio",
-]
-
-[[package]]
-name = "nibble_vec"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77a5d83df9f36fe23f0c3648c6bbb8b0298bb5f1939c8f2704431371f4b84d43"
-dependencies = [
- "smallvec",
 ]
 
 [[package]]
@@ -5147,16 +5102,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "941ba9d78d8e2f7ce474c015eea4d9c6d25b6a3327f9832ee29a4de27f91bbb8"
 
 [[package]]
-name = "radix_trie"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c069c179fcdc6a2fe24d8d18305cf085fdbd4f922c041943e203685d6a1c58fd"
-dependencies = [
- "endian-type",
- "nibble_vec",
-]
-
-[[package]]
 name = "rand"
 version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5527,7 +5472,6 @@ dependencies = [
  "serde",
  "serde_json",
  "vm",
- "vm-genesis",
 ]
 
 [[package]]
@@ -5869,28 +5813,20 @@ name = "seed-peer-generator"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "executor",
- "generate-key",
  "hex",
  "libra-canonical-serialization",
  "libra-config",
  "libra-crypto",
- "libra-key-manager",
  "libra-logger",
  "libra-network-address",
  "libra-secure-json-rpc",
  "libra-temppath",
  "libra-types",
- "libra-vm",
  "libra-workspace-hack",
- "libradb",
  "rand 0.7.3",
  "serde_yaml",
- "storage-interface",
  "structopt 0.3.20",
  "thiserror",
- "transaction-builder",
- "vm-genesis",
 ]
 
 [[package]]
@@ -6304,7 +6240,6 @@ dependencies = [
  "bytes",
  "channel",
  "compiled-stdlib",
- "executor",
  "executor-test-helpers",
  "executor-types",
  "fail",
@@ -6328,7 +6263,6 @@ dependencies = [
  "memsocket",
  "netcore",
  "network",
- "network-builder",
  "once_cell",
  "proptest",
  "rand 0.7.3",
@@ -6337,7 +6271,6 @@ dependencies = [
  "storage-service",
  "subscription-service",
  "tokio",
- "transaction-builder",
  "vm-genesis",
 ]
 
@@ -6472,7 +6405,6 @@ name = "storage-service"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "async-trait",
  "futures 0.3.8",
  "itertools 0.9.0",
  "libra-canonical-serialization",
@@ -7295,7 +7227,6 @@ dependencies = [
  "executor",
  "executor-test-helpers",
  "fail",
- "libra-config",
  "libra-crypto",
  "libra-state-view",
  "libra-temppath",
